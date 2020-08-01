@@ -7,13 +7,13 @@ public class TransferidorDeArquivos {
 		absoluteLocalFile = "c:\\home\\";
 	}
 
-	public void transfere(CredencialSftp credencial, Servidor servidor, Relatorio relatorio) {
+	public void transfere(CredencialSftp credencial, Relatorio relatorio) {
 
-		String absoluteRemoteFile = servidor.getCaminhoBK() + relatorio.getNome() + ".f" + servidor.getNumero() + "*";
+		String absoluteRemoteFile = relatorio.getServidor().getCaminhoBK() + relatorio.getNome() + ".f" + relatorio.getServidor().getNumero() + "*";
 
 		Sftp sftp = new Sftp(credencial.getLogin(), credencial.getPassword());
 
-		sftp.transfere(servidor.getHost(), absoluteRemoteFile, absoluteLocalFile);
+		sftp.transfere(relatorio.getServidor().getHost(), absoluteRemoteFile, absoluteLocalFile);
 
 	}
 

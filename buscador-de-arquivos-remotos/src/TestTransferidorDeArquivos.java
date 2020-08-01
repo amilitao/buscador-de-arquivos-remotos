@@ -15,10 +15,11 @@ public class TestTransferidorDeArquivos {
 		
 		Relatorio relatorio = new Relatorio();
 		relatorio.setNome("srt01");
+		relatorio.setServidor(servidor);
 		
 		
 		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
-		transferidor.transfere(credencialSftp, servidor, relatorio);		
+		transferidor.transfere(credencialSftp, relatorio);		
 		
 		
 	}

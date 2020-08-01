@@ -2,7 +2,7 @@
 public class Servidor {
 	
 	private String host;
-	private String numero;
+	private String numero;	
 	private String caminhoBK;
 	
 	
