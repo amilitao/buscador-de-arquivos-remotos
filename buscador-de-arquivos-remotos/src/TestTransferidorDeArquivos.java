@@ -6,10 +6,10 @@ public class TestTransferidorDeArquivos {
 		
 		CredencialSftp credencialSftp = new CredencialSftp();
 		credencialSftp.setLogin("amilitao");
-		credencialSftp.setPassword("springMVC@20");
+		credencialSftp.setPassword("amilitao");
 		
 		Servidor servidor = new Servidor();
-		servidor.setHost("db020");
+		servidor.setHost("192.168.0.103");
 		servidor.setNumero("020");
 		servidor.setCaminhoBK("/fs1/save/bk/");
 		
@@ -19,8 +19,8 @@ public class TestTransferidorDeArquivos {
 		
 		
 		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
-		transferidor.transfere(credencialSftp, relatorio);		
-		
+		transferidor.download(credencialSftp, relatorio);	
+		transferidor.upload(credencialSftp, relatorio);	
 		
 	}
 	
