@@ -10,7 +10,7 @@ public class TransferidorDeArquivos {
 	public void download(CredencialSftp credencial, Relatorio relatorio) {
 
 		String absoluteRemoteFile = relatorio.getServidor().getCaminhoBK() 
-				+ relatorio.getNome() + ".f" + relatorio.getServidor().getNumero() + "*";
+				+ relatorio.getNome() + ".f" + relatorio.getServidor().getNumero() + ".1234";
 
 		Sftp sftp = new Sftp(credencial.getLogin(), credencial.getPassword());
 

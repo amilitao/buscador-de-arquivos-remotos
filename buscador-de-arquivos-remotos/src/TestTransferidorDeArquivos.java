@@ -20,7 +20,7 @@ public class TestTransferidorDeArquivos {
 		
 		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
 		transferidor.download(credencialSftp, relatorio);	
-		transferidor.upload(credencialSftp, relatorio);	
+	//	transferidor.upload(credencialSftp, relatorio);	
 		
 	}
 	
