@@ -6,11 +6,11 @@ public class TestTransferidorDeArquivos {
 		
 		CredencialSftp credencialSftp = new CredencialSftp();
 		credencialSftp.setLogin("amilitao");
-		credencialSftp.setPassword("amilitao");
+		credencialSftp.setPassword("eclipse#1985");
 		
 		Servidor servidor = new Servidor();
-		servidor.setHost("192.168.0.103");
-		servidor.setNumero("020");
+		servidor.setHost("db048");
+		servidor.setNumero("048");
 		servidor.setCaminhoBK("/fs1/save/bk/");
 		
 		Relatorio relatorio = new Relatorio();
@@ -19,8 +19,12 @@ public class TestTransferidorDeArquivos {
 		
 		
 		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
-		transferidor.download(credencialSftp, relatorio);	
-	//	transferidor.upload(credencialSftp, relatorio);	
+		
+		String host = relatorio.getServidor().getHost();
+		String absoluteRemoteFile = relatorio.getAbsoluteRemotePath() + relatorio.getNomeCompleto() + "*";
+		
+		//transferidor.download(credencialSftp, host, absoluteRemoteFile, "c:\\home");	
+		transferidor.upload(credencialSftp, host, relatorio.getAbsoluteRemotePath(), "c:\\home\\srm02.comprador19.f111" );	
 		
 	}
 	

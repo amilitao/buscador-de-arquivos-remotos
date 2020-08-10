@@ -18,11 +18,16 @@ public class Relatorio {
 
 	public void setServidor(Servidor servidor) {
 		this.servidor = servidor;
+	}	
+	
+	
+	public String getAbsoluteRemotePath() {
+		return this.getServidor().getCaminhoBK();
 	}
 	
-	
-	
-	
+	public String getNomeCompleto() {
+		return this.nome + ".f" + this.getServidor().getNumero();
+	}
 	
 
 
