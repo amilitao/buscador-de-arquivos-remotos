@@ -8,6 +8,7 @@ public class TestTransferidorDeArquivos {
 		credencialSftp.setLogin("amilitao");
 		credencialSftp.setPassword("eclipse#1985");
 		
+		
 		Servidor servidor = new Servidor();
 		servidor.setHost("db048");
 		servidor.setNumero("048");
