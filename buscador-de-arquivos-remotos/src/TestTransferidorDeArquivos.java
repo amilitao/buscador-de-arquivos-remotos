@@ -6,7 +6,7 @@ public class TestTransferidorDeArquivos {
 		
 		CredencialSftp credencialSftp = new CredencialSftp();
 		credencialSftp.setLogin("amilitao");
-		credencialSftp.setPassword("eclipse#1985");
+		credencialSftp.setPassword("senha");
 		
 		
 		Servidor servidor = new Servidor();
