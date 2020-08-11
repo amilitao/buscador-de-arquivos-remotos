@@ -19,7 +19,7 @@ public class TestTransferidorDeArquivos {
 		relatorio.setServidor(servidor);
 		
 		
-		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
+		TransferidorDeArquivos transferidor = new TransferidorDeArquivos(credencialSftp);
 		
 		String host = relatorio.getServidor().getHost();
 		String absoluteRemoteFile = relatorio.getAbsoluteRemotePath() + relatorio.getNome() + "*";
@@ -27,8 +27,8 @@ public class TestTransferidorDeArquivos {
 		String diretorioEnviar = "c:\\home\\usuario\\projetos\\relatoriosdiarios\\enviar\\";
 				
 		
-		transferidor.download(credencialSftp, host, absoluteRemoteFile, diretorioRecebidos);	
-		//transferidor.upload(credencialSftp, host, relatorio.getAbsoluteRemotePath(), diretorioEnviar + "srm02.f111" );	
+		transferidor.download(host, absoluteRemoteFile, diretorioRecebidos);	
+		//transferidor.upload(host, relatorio.getAbsoluteRemotePath(), diretorioEnviar + "srm02.f111" );	
 		
 	}
 	
