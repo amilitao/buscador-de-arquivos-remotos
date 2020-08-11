@@ -6,26 +6,29 @@ public class TestTransferidorDeArquivos {
 		
 		CredencialSftp credencialSftp = new CredencialSftp();
 		credencialSftp.setLogin("amilitao");
-		credencialSftp.setPassword("senha");
+		credencialSftp.setPassword("springMVC@20");
 		
 		
 		Servidor servidor = new Servidor();
-		servidor.setHost("db048");
-		servidor.setNumero("048");
-		servidor.setCaminhoBK("/fs1/save/bk/");
+		servidor.setHost("dbcom01");
+		servidor.setNumero("111");
+		servidor.setCaminhoBK("/fs206/save/bk/");
 		
 		Relatorio relatorio = new Relatorio();
-		relatorio.setNome("srt01");
+		relatorio.setNome("srm02");
 		relatorio.setServidor(servidor);
 		
 		
 		TransferidorDeArquivos transferidor = new TransferidorDeArquivos();
 		
 		String host = relatorio.getServidor().getHost();
-		String absoluteRemoteFile = relatorio.getAbsoluteRemotePath() + relatorio.getNomeCompleto() + "*";
+		String absoluteRemoteFile = relatorio.getAbsoluteRemotePath() + relatorio.getNome() + "*";
+		String diretorioRecebidos = "c:\\home\\usuario\\projetos\\relatoriosdiarios\\recebidos\\";
+		String diretorioEnviar = "c:\\home\\usuario\\projetos\\relatoriosdiarios\\enviar\\";
+				
 		
-		//transferidor.download(credencialSftp, host, absoluteRemoteFile, "c:\\home");	
-		transferidor.upload(credencialSftp, host, relatorio.getAbsoluteRemotePath(), "c:\\home\\srm02.comprador19.f111" );	
+		transferidor.download(credencialSftp, host, absoluteRemoteFile, diretorioRecebidos);	
+		//transferidor.upload(credencialSftp, host, relatorio.getAbsoluteRemotePath(), diretorioEnviar + "srm02.f111" );	
 		
 	}
 	
